@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons");
+@import url("../gebruikersbeheer/users.css");
+
+.folder-icon, .folder-text {
+    color: white;
+    text-decoration: none;
+    vertical-align:middle;
+}
+.folder-text {
+    margin-left: 0.5rem;
+}
+table thead tr th {
+    width: 50%;
+}
+.new-page {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    background-color: black;
+    z-index: 5;
+}
+#btn-new {
+    cursor: pointer;
+}
+.new-page-container {
+    padding: 5rem;
+    position: relative;
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.table-editor {
+    margin: auto;
+    margin-top: auto;
+}

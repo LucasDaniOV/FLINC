@@ -1,0 +1,28 @@
+<div class="article-container">
+<article>
+<h1>Maatwerk als norm bij Fleet Investment Company</h1>
+<p>Flinc, Fleet Investment Company, is gespecialiseerd in het leveren van uw perfecte voertuig, neutraal advies en wagenparkbeheer op maat. Of u nou op zoek bent naar een elektrische auto, bedrijfswagen, vrachtwagen of leasecontract: wij vinden het belangrijk dat wij u de beste, voordeligste oplossing bieden. Daarom kijken we eerst naar uw wensen en toekomstplannen, en daarna naar de oplossing.</p>
+</article>
+</div>
+<div class="article-container">
+<article>
+<h1>35 jaar ervaring &amp; vele partners</h1>
+<p>Met onze jarenlange ervaring in het mobiliteitsvak weten wij als geen ander welke mogelijkheden er zijn. Daarnaast zijn wij ook erg trots op de samenwerkingsverbanden die wij zijn aangegaan met specialistische vakmensen op het gebied van onderhoud, elektrisch vervoer, trucks &amp;trailers en financiering. Door samen te werken met top partners kunnen wij u echt persoonlijk van dienst zijn en een plan op maat aanbieden.</p>
+</article>
+</div>
+<div id="a3" class="article-container">
+<article>
+<h1>Ondernemend &amp; Transparant</h1>
+<p>Wij houden van snel schakelen, flexibiliteit en creatieve oplossingen. Flinc komt voort uit een groot ondernemershart: wij denken graag mee met ondernemers om antwoorden te vinden op complexe vervoersvraagstukken.</p>
+<br />
+<p>Daarbij staat transparantie centraal. Wij leveren transparante adviezen met een helder onderbouwde motivatie. Met openheid, eerlijke voorwaarden en duidelijke afspraken investeren we in duurzame relaties. Want wij houden net als u, niet van gedoe achteraf.</p>
+</article>
+</div>
+<div id="a4" class="article-container">
+<article>
+<h1>100% Onafhankelijk maatwerk, dat is Fleet Investment Company</h1>
+<p>We zijn niet merkgebonden. Alleen zo kunnen we altijd de beste maatwerk oplossing bieden en u van onafhankelijk advies voorzien. Het opent deuren voor specifieke wensen: iedere vraag is welkom!</p>
+<br />
+<p>Of u nou &eacute;&eacute;n of meerdere auto&rsquo;s zoekt voor uw bedrijf, wij helpen u vakkundig op weg! Met voertuigen die echt passen bij uw onderneming. Met onze merkonafhankelijkheid zullen wij altijd de beste auto&rsquo;s vinden voor u. Goed, veilig en vertrouwd op weg met maatwerk van Flinc!</p>
+</article>
+</div>

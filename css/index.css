@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: var(--logo-grey);
+}
+:root {
+    --logo-blue: rgb(0, 167, 211);
+    --logo-grey: rgb(89, 82, 78);
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.no-highlight, a, btn, .dots {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.no-highlight:focus, a:focus, btn:focus, .dots:focus {
+    outline: none !important;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    background-color: var(--logo-blue);
+}
+.big-man-grid {
+    display: none;
+}
+
+/*nav*/
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 12.5vh;
+    min-width: 250px;
+    min-height: 95px;
+    background-color: black;
+    z-index: 100000000;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+.menu, .search, .close {
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--logo-grey);
+}
+.menu:hover, .search:hover, .close:hover {
+    color: white;
+}
+.logo {
+    background-image: url("../img/Logo_Flinc.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.search-container {
+    justify-content: right;
+}
+.search-bar, #nav-contact {
+    display: none;
+}
+/*nav*/
+
+/*carousel*/
+.carousel {
+    margin-top: 12.5vh;
+    height: 87.5vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+.prev, .next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: var(--logo-grey);
+    cursor: pointer;
+}
+.prev:hover, .next:hover {
+    color: white;
+}
+.dots li:hover {
+    background-color: white;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+.disabled:hover {
+    cursor: not-allowed;
+    color: var(--logo-grey);
+}
+.disabled {
+    opacity: 0.5;
+}
+.controls ul {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    display: flex;
+}
+.controls ul li {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--logo-grey);
+    border-radius: 50px;
+    margin: 10px;
+    background: var(--logo-grey);
+    cursor: pointer;
+}
+.controls ul li.selected {
+    background: transparent;
+}
+.slider-container {
+    height: 100%;
+    width: 500%;
+    display: flex;
+    overflow: hidden;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+    background-color: var(--logo-blue);
+}
+.slide {
+    max-height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    user-select: none;
+}
+.slide img {
+    max-width: 100%;
+    max-height: 60%;
+    transition: transform 0.3s ease-in-out;
+    cursor: grab;
+}
+.slide h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.slide h4 {
+    font-size: 1.5rem;
+}
+.btn {
+    background-color: white;
+    color: var(--logo-grey);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    border: solid 2px white;
+}
+.btn:hover {
+    background-color: var(--logo-blue);
+    color: white;
+}
+.grabbing {
+    cursor: grabbing;
+}
+.grabbing .slide img {
+    transform: scale(0.9);
+    cursor: grabbing;
+}
+/*carousel*/
+
+/*section & footer*/
+.big-section-container {
+    display: none;
+}
+.second-container {
+    height: 87.5vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img-container {
+    height: 50%;
+    width: 100%;
+    padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+    cursor: grab;
+    position: relative;
+}
+.img-container-fleet {
+    padding: 0.75rem 1.5rem 1.5rem 1.5rem;
+}
+.img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    opacity: 0.7;
+    border: solid 2px white;
+    transition: transform 0.3s ease-in-out;
+}
+.second-container .grabbing img {
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+.img-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--logo-blue);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    border: solid 2px white;
+}
+.third-container {
+    height: 43.75vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.img-cont2 {
+    height: 100%;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+.cont4, .cont6 {
+    height: 35vh;
+    width: 100vw;
+    position: relative;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+}
+.cont4-img {
+    height: 100%;
+    width: 100%;
+    background: url("../img/homepage/dit_is_flinc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+.cont5, .cont7, .cont9 {
+    width: 100vw;
+    padding: 1.5rem;
+    padding-top: 0;
+}
+.cont5 h1, .cont7 h1, .cont9 h1 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+.cont5-btn, .cont7-btn, .cont9-btn {
+    width: auto;
+    height: auto;
+    margin: 1rem 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.cont5-btn a, .cont7-btn a, .cont9-btn a {
+    background-color: var(--logo-blue);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    color: white;
+    border: solid 2px var(--logo-grey);
+}
+.cont6 {
+    padding: 0 0 1.5rem 1.5rem;
+}
+.cont6-img {
+    height: 100%;
+    width: 100%;
+    background: url("../img/homepage/contact.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+.cont7 h1 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+footer {
+    height: 65vh;
+    width: 100vw;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.footer-item {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+.footer-menu {
+    grid-template-rows: repeat(9, 1fr);
+}
+.footer-item span {
+    color: white;
+}
+.footer-item a {
+    text-decoration: none;
+}
+.footer-item a:hover {
+    color: var(--logo-blue);
+}
+.linkedIn-logo, #footer-bosch, #footer-toptruck, #footer-friesland {
+    background-image: url("../img/homepage/bosch.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100%;
+    width: 100%;
+}
+.linkedIn-logo {
+    background-image: url("../img/homepage/LinkedIn.jpg");
+}
+#footer-toptruck {
+    background-image: url("../img/homepage/toptruck.jpg");
+}
+#footer-friesland {
+    background-image: url("../img/homepage/friesland.jpg");
+}
+.footer-copyright {
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+.footer-copyright span {
+    color: white;
+}
+.nieuwsbrief {
+    height: 15vh;
+    padding: 1rem;
+    background-color: black;
+}
+.nieuwsbrief-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.nieuwsbrief-bar input {
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    border: solid 2px var(--logo-grey);
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--logo-grey);
+    color: white;
+}
+.nieuwsbrief span {
+    color: white;
+}
+.nieuwsbrief-bar button {
+    background-color: black;
+    border: none;
+}
+#nieuwsbrief-done {
+    font-size: 3rem;
+    margin-top: 0.2rem;
+    cursor: pointer;
+
+}
+/*section & footer*/
+
+/*overlay*/
+.overlay {
+    display: none;
+    grid-template-rows: repeat(8), 1fr;
+    position: fixed;
+    top: 12.5vh;
+    z-index: 1;
+    width: 100vw;
+    height: 87.5vh;    
+    background-color: black;
+}
+.overlay-item {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 1.5rem;
+}
+#overlay-logo {
+    display: none;
+}
+.overlay-item:hover {
+    color: var(--logo-blue);
+}
+/*overlay*/
+
+/*min-height*/
+.container {
+    min-height: 760px;
+}
+.carousel, .second-container, .big-man-grid {
+    min-height: 665px;
+}
+.third-container {
+    min-height: 332.5px;
+}
+.cont4 {
+    min-height: 266px;
+}
+footer {
+    min-height: 494px;
+}
+.nieuwsbrief {
+    min-height: 114px;
+}
+.footer-copyright {
+    min-height: 57px;
+}
+.cont5-text {
+    display: none;
+}
+/*min-height*/
+
+/*medium devices, 768px and up*/
+@media only screen and (min-width: 768px){
+    #hamburger{
+        display: none;
+    }
+    .container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    nav {
+        left: 20vw;
+        width: 80vw;
+    }
+    .overlay {
+        all: unset;
+        display: grid;
+        grid-template-rows: repeat(8), 1fr;
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        background-color: black;
+    }
+    .overlay-item {
+        width: 20vw;
+        font-size: 1.8vw;
+        justify-content: left;
+        padding-left: 1rem;
+    }
+    .carousel, .second-container, .third-container, .cont4, .cont6, .cont5, .cont7, .cont9, footer, .footer-copyright, .nieuwsbrief {
+        width: 80vw;
+        margin-left: 20vw;
+    }
+}
+/*medium devices, 768px and up*/
+
+/*large devices, 1200px and up*/
+@media only screen and (min-width: 1200px){
+    .container {
+        grid-template-columns: repeat(10, 1fr);
+    }
+    .container {
+        grid-template-rows: repeat(20, 1fr);
+    }
+    nav {
+        left: 10vw;
+        width: 90vw;
+        min-height: 40px;
+        height: 5vh;
+        padding: 0;
+    }
+    .search-container {
+        justify-content: center;
+    }
+    .search-bar {
+        display: block;
+        width: 50%;
+    }
+    .search {
+        font-size: 30px;
+    }
+    .nav-contact-container {
+        justify-content: center;
+    }
+    #nav-contact {
+        display: block;
+        margin-right: 5vw;
+        text-decoration: none;
+        background-color: var(--logo-blue);
+        padding: 0.5rem;
+    }
+    #overlay-contact {
+        display: none;
+    }
+    .overlay {
+        grid-template-rows: repeat(20, 1fr);
+        min-height: 500px;
+    }
+    .overlay-item {
+        justify-content: left;
+        width: 10vw;
+        font-size: 0.85vw;
+        padding-left: 1rem;
+    }
+    #overlay-logo {
+        display: block;
+        grid-row: span 3;
+        margin: 1rem;
+    }
+    #nav-logo {
+        display: none;
+    }
+    .carousel {
+        width: 90vw;
+        margin: 5vh 0 0 10vw;
+        height: 95vh;
+    }
+    .slide {
+        width: 90vw;
+    }
+    .carousel, .second-container, .third-container, .cont4, .cont6, .cont5, .cont7, .cont9, footer, .footer-copyright, .nieuwsbrief {
+        width: 90vw;
+        margin-left: 10vw;
+    }
+    .second-container {
+        height: 95vh;
+    }
+    .third-container {
+        height: 47.5vh;
+    }
+    .cont4, .cont6 {
+        height: 42.5vh;
+    }
+    footer {
+        height: 72.5vh;
+    }
+
+    .second-container, .third-container {
+        display: none;
+    }
+    .big-section-container {
+        display: block;
+        height: 95vh;
+        width: 90vw;
+        margin-left: 10vw;
+        min-height: 722px;
+    }
+    .big-section-article-container {
+        width: 90vw;
+        height: 95vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: black;
+    }
+    .big-section-article-container-item {
+        width: 45vw;
+        height: 47.5vh;
+        position: relative;
+        /*padding: 5rem;*/
+    }
+    .big-section-article-container-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+        transition: transform 0.3s ease-in-out;
+    }
+    .big-section-article-container-item a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out;
+        color: #000;
+        border: solid 2px white;
+    }
+    .dit-is-flinc {
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cont4 {
+        width: 45vw;
+    }
+    .cont5 {
+        width: 45vw;
+        margin: 0;
+        position: relative;
+    }
+    .cont5 h1, .cont5 p {
+        display: none;
+    }
+    .cont5-text, .cont5-text h1, .cont5-text p {
+        display: block;
+    }
+    .cont5-text {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding-right: 2rem;
+    }
+    .cont4-img {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        transition: transform 0.1s ease-in-out;
+    }
+    .footer-item span, .nieuwsbrief span {
+        font-size: 1.5rem;
+    }
+}
+/*large devices, 1200px and up*/
