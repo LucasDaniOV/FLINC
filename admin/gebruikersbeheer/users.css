@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+}
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    font-size: 16px;
+    background: linear-gradient(#262626, #592722);
+    color: white;
+}
+td {
+    border: 1px solid black;
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+}
+th {
+    height: 4rem;
+    padding: 1rem;
+    color: white;
+}
+td {
+    height: 2rem;
+    padding: 1rem;
+}
+.small-width {
+    width: 8%;
+}
+.big-width {
+    width: 28%;
+}
+.table-rows:hover {
+    background-color: #262626 !important;
+    cursor: pointer;
+}
+nav {
+    height: 4rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 2rem;   
+}
+nav a:hover {
+    color: #f21f0c;
+}
+.table-editor {
+    height: 4rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.table-btn {
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+    background-color: #f21f0c;
+    border-radius: 5px;
+}
+.table-btn-hidden {
+    background-color: #8c2c23;
+    pointer-events: none;
+}
+.table-search input {
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}

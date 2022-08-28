@@ -1,0 +1,45 @@
+main {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 2rem 1rem 1rem 1rem;
+}
+article {
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    color: black;
+    position: relative;
+}
+.msg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+}
+.msg-header a {
+    color: white;
+    text-decoration: none;
+}
+.msg-header a .material-icons:hover {
+    cursor: pointer;
+    color: #f21f0c;
+}
+article p {
+    margin: 0;
+}
+.expand {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5rem;
+}
+.expand:hover {
+    cursor: pointer;
+    color: #f21f0c;
+}

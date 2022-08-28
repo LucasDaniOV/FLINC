@@ -1,0 +1,4 @@
+<div class="form-header">
+<h3>Vul het contact formulier in en wij nemen zo spoedig mogelijk contact met u op.</h3>
+</div>
+<form action=""><input type="text" placeholder="E-mail" /> <input type="text" placeholder="Naam" /> <input type="text" placeholder="Telefoon" /> <input type="text" placeholder="Bedrijf" /> <textarea id="" cols="20" name="" rows="10" placeholder="Bericht"></textarea> <input type="submit" value="Verstuur" /></form>
